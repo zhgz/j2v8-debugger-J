@@ -12,6 +12,8 @@ import com.facebook.stetho.Stetho.DefaultInspectorModulesBuilder;
 import com.facebook.stetho.inspector.console.RuntimeReplFactory;
 import com.facebook.stetho.inspector.protocol.ChromeDevtoolsDomain;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
@@ -47,7 +49,7 @@ public final class StethoHelper {
         return scriptsPathPrefix;
     }
 
-    public final void setScriptsPathPrefix(@NonNull String value) {
+    public static void setScriptsPathPrefix(@NonNull String value) {
         scriptsPathPrefix = "/" + value + "/";
     }
 

@@ -71,7 +71,7 @@ class ExampleActivity : AppCompatActivity() {
     private fun updateUserToRandom() {
         val newUser = "user" + Random().nextInt(10)
         //following assumes, that some JS sources are different per user
-        StethoHelper.scriptsPathPrefix = newUser
+        StethoHelper.setScriptsPathPrefix(newUser)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
